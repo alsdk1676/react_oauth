@@ -32,7 +32,7 @@ const SocialSignUp = ({email, provider}) => {
       .then((res) => {
         if(!res.ok) {
           return res.json().then((res) => {
-            alert(`${res.message}(${res.provider})`)
+            alert(`${res.message}${res.provider}`)
           })
         }
         return res.json()
