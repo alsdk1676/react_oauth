@@ -9,8 +9,10 @@ export const setUser = createAction(SET_USER, (currentUser) => currentUser);
 export const setUserStatus = createAction(SET_USER_STATUS, (isLogin) => isLogin);
 
 // DB 초기값
-const UserInitalValue = {
-    curruentUser : {
+const UserInitialValue = {
+    currentUser : {
+        // 필요한 값 추가하기
+        id : 0,
         memberEmail : "",
         memberName : "",
         memberPicture : "",
@@ -23,10 +25,10 @@ const UserInitalValue = {
 
 const user = handleActions({
 
-    [SET_PREVIOUS_URL] : (state = UserInitalValue, action) => ({...state, previousUrl: action.payload}),
-    [SET_USER] : (state = UserInitalValue, action) => ({...state, currentUser: action.payload}),
-    [SET_USER_STATUS] : (state = UserInitalValue, action) => ({...state, isLogin: action.payload})
+    [SET_PREVIOUS_URL] : (state = UserInitialValue, action) => ({...state, previousUrl: action.payload}),
+    [SET_USER] : (state = UserInitialValue, action) => ({...state, currentUser: action.payload}),
+    [SET_USER_STATUS] : (state = UserInitialValue, action) => ({...state, isLogin: action.payload})
 
-}, UserInitalValue);
+}, UserInitialValue);
 
 export default user;
