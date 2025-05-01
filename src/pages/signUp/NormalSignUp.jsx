@@ -46,7 +46,7 @@ const NormalSignUp = () => {
       .then((res) => {
         console.log(res)
         alert(res.message)
-        // 이동
+        // 페이지 이동
         navigate("/sign-in")
       })
       .catch(console.error)
