@@ -57,7 +57,7 @@ const Sms = () => {
           alert(`인증코드가 일치하지 않습니다. (${errorCount}회)`)
         }
         setConfirmVerificationCode(res.isFlag)
-          // 중간중간 예외처리 (ex. ok가 아니라면 ,,)
+          // 중간중간 예외 처리 (ex. ok가 아니라면 ,,)
       })
       .catch(console.error)
     }
