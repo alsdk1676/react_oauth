@@ -21,7 +21,6 @@ const SocialSignUp = ({email, provider}) => {
 
       console.log("oauthMemberVO", oauthMemberVO)
 
-      // register 요청 보냄 (최초 로그인한 사용자 => register로 요청)
       await fetch("http://localhost:10000/member/register", {
         method : "POST",
         headers : {
@@ -37,7 +36,6 @@ const SocialSignUp = ({email, provider}) => {
         }
         return res.json()
       })
-      // 성공한 res
       .then((res) => {
         console.log(res)
       })
