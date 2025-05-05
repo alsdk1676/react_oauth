@@ -48,6 +48,12 @@ const SocialSignUp = ({email, provider}) => {
           {...register("memberName")}
         />
       </label>
+      <label>
+        <p>비밀번호</p>
+        <input type="text" placeholder='비밀번호를 입력하세요.' 
+          {...register("memberName")}
+        />
+      </label>
 
       <label>
         <p>닉네임</p>
